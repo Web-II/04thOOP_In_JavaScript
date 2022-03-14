@@ -113,7 +113,7 @@ class TaggedBlogEntry extends BlogEntry {
 // const myTaggedEntry = new TaggedBlogEntry(
 //   'A day in the life of a UNICEF Goodwill Ambassador',
 //   'Nafi Thiam',
-//   ['United Nations', 'UNICEF']
+//   'United Nations', 'UNICEF'
 // );
 // console.log(myTaggedEntry.body); // A day in the life of a UNICEF Goodwill Ambassador
 // myTaggedEntry.addTag('children');
