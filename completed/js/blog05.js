@@ -224,7 +224,7 @@ class GroupBlog extends Blog {
   }
 
   get authors() {
-    return this.#authors;
+    return this.#authors.sort();
   }
 
   addAuthor(author) {
@@ -270,6 +270,7 @@ ourGroupBlog.addEntry(
 );
 
 console.log(ourGroupBlog.nrOfEntries); // 2
+console.log(ourGroupBlog.authors); // ["Bashir Abdi", "Matthias Casse", "Nafi Thiam", "Nina Derwael"]
 console.log(ourGroupBlog.toString());
 // == A blog created by Nafi Thiam. ==
 

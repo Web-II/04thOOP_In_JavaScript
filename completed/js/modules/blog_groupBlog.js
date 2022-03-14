@@ -65,7 +65,7 @@ export class GroupBlog extends Blog {
   }
 
   get authors() {
-    return this.#authors;
+    return this.#authors.sort();
   }
 
   addAuthor(author) {
