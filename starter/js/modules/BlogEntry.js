@@ -1,4 +1,4 @@
-export class BlogEntry {
+export default class BlogEntry {
   static #wordsInShortBody = 5;
   #date = new Date();
   #entryBody;
@@ -57,9 +57,8 @@ export class BlogEntry {
   }
 
   toString() {
-    return `On ${this.#toBlogFormat(this.#date)} ${this.author} wrote:\n---\n${
-      this.body
-    }`;
+    return `On ${this.#toBlogFormat(this.#date)} ${this.author} wrote:\n---\n${this.body
+      }`;
   }
 
   #toBlogFormat(date) {
@@ -70,37 +69,5 @@ export class BlogEntry {
       day: 'numeric'
     };
     return date.toLocaleDateString('en-NL', options);
-  }
-}
-
-export class TaggedBlogEntry extends BlogEntry {
-  #tags;
-
-  constructor(body, author, ...tags) {
-    super(body, author);
-    this.#tags = tags;
-  }
-
-  get tags() {
-    return this.#tags;
-  }
-
-  addTag(tag) {
-    this.tags.push(tag);
-  }
-
-  removeTag(tag) {
-    const index = this.tags.indexOf(tag);
-    if (index !== -1) {
-      this.tags.splice(index, 1);
-    }
-  }
-
-  contains(searchText) {
-    return super.contains(searchText) || this.tags.includes(searchText);
-  }
-
-  toString() {
-    return `${super.toString()}\nTags: ${this.tags.join(', ')}`;
   }
 }

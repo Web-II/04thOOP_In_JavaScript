@@ -1,4 +1,5 @@
-import { Blog, GroupBlog } from './blog_groupBlog.js';
+import Blog from "./Blog.js";
+import GroupBlog from "./GroupBlog.js";
 
 const ourGroupBlog = new GroupBlog(
   'Nafi Thiam',
