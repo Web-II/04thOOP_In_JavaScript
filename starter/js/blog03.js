@@ -44,7 +44,7 @@ class BlogEntry {
 // Kopieer hieronder de klasse Blog uit blog02.js en pas de klasse aan.
 // - voorzie een publieke methode contains(searchText). De methode
 //   retourneert true indien in 1 van de entries de searchText voorkomt;
-//   maak gebruik van de methode searchText uit de klasse BlogEntry.
+//   maak gebruik van de methode contains uit de klasse BlogEntry.
 // - voorzie een publieke methode addEntry(body) die een nieuwe entry
 //   maakt met de gegeven body en deze entry vooraan aan entries toevoegt.
 // - voorzie een publieke methode getEntry(index) die de entry op plaats
