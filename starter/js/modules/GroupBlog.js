@@ -20,8 +20,8 @@ class GroupBlog extends Blog {
     if (!this.#authors.includes(author)) this.#authors.push(author);
   }
 
-  removeAuhtor(author) {
-    if (author !== creator) {
+  removeAuthor(author) {
+    if (author !== this.creator) {
       const index = this.authors.indexOf(author);
       if (index !== -1) {
         this.authors.splice(index, 1);

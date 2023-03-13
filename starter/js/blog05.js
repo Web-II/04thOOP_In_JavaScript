@@ -71,7 +71,7 @@ class BlogEntry {
       weekday: 'long',
       year: 'numeric',
       month: 'long',
-      day: 'numeric'
+      day: 'numeric',
     };
     return date.toLocaleDateString('en-NL', options);
   }
@@ -199,7 +199,7 @@ class Blog {
 // Aan een GroupBlog werken verschillende auteurs...
 // - declareer een private field #authors; dit wordt een array die de namen
 //   van de auteurs die meewerken aan de GroupBlog bevat
-// - voorzie een constructor voor GroupBlog; naast title en creator moet je
+// - voorzie een constructor voor GroupBlog; naast creator moet je
 //   ook een willekeurig aantal auteurs kunnnen opgeven, gebruik een rest-parameter
 // - maak in de constructor gebruik van de methode addAuthor (zie verderop); zorg dat de
 //   creator van de Blog ook wordt toegevoegd aan de lijst van authors
